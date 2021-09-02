@@ -1,0 +1,535 @@
+MATCH (a:node {name: 'Taxonomy of Educational Opportunities '} ), (b:node {name: 'Evaluation'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Taxonomy of Educational Opportunities '} ), (b:node {name: 'Places of Learning'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Taxonomy of Educational Opportunities '} ), (b:node {name: 'Education'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Taxonomy of Educational Opportunities '} ), (b:node {name: 'Use Cases'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Taxonomy of Educational Opportunities '} ), (b:node {name: 'Learning Resources'} ) MERGE (a)-[:relatedTo]->(b);
+
+MATCH (a:node {name: 'Learning Resources'} ), (b:node {name: 'Courses'} ) MERGE (a)-[:relatedTo]->(b);
+
+MATCH (a:node {name: 'Courses'} ), (b:node {name: 'Duration'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Duration'} ), (b:node {name: 'Number of sessions'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Duration'} ), (b:node {name: 'Number of months'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Duration'} ), (b:node {name: 'Number of years'} ) MERGE (a)-[:relatedTo]->(b);
+
+MATCH (a:node {name: 'Learning Resources'} ), (b:node {name: 'Labs'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Learning Resources'} ), (b:node {name: 'Seminars'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Learning Resources'} ), (b:node {name: 'Tutorials'} ) MERGE (a)-[:relatedTo]->(b);
+
+MATCH (a:node {name: 'Education'} ), (b:node {name: 'Education, levels & types'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Education'} ), (b:node {name: 'Education, Fields of Learning'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Education'} ), (b:node {name: 'Education, Skills & competencies'} ) MERGE (a)-[:relatedTo]->(b);
+
+MATCH (a:node {name: 'Education, Skills & competencies'} ), (b:node {name: 'Skills'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Education, Skills & competencies'} ), (b:node {name: 'Jobs'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Education, Skills & competencies'} ), (b:node {name: 'Paths of Learnins'} ) MERGE (a)-[:relatedTo]->(b);
+
+MATCH (a:node {name: 'Skills'} ), (b:node {name: 'Bussiness Development'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Skills'} ), (b:node {name: 'Programming'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Skills'} ), (b:node {name: 'Community Developer'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Skills'} ), (b:node {name: 'Communicator'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Skills'} ), (b:node {name: 'Research'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Skills'} ), (b:node {name: 'Soft Skills'} ) MERGE (a)-[:relatedTo]->(b);
+
+MATCH (a:node {name: 'Jobs'} ), (b:node {name: 'BC Engineer/Administrator'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Jobs'} ), (b:node {name: 'BC Developer/Smart Contract Developer'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Jobs'} ), (b:node {name: 'Crypto Engineer/Token Engineer'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Jobs'} ), (b:node {name: 'BC Architect'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Jobs'} ), (b:node {name: 'BC Quality Engineer/Tester'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Jobs'} ), (b:node {name: 'BC Legal Consultant of Attorney'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Jobs'} ), (b:node {name: 'BaaS Operator'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Jobs'} ), (b:node {name: 'BC Journalist/Writer'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Jobs'} ), (b:node {name: 'BC Project Manager'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Jobs'} ), (b:node {name: 'Blockchain Cybersecurity'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Jobs'} ), (b:node {name: 'BC Market Research'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Jobs'} ), (b:node {name: 'BC Data Scientist'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Jobs'} ), (b:node {name: 'BC Community Developer'} ) MERGE (a)-[:relatedTo]->(b);
+MATCH (a:node {name: 'Jobs'} ), (b:node {name: 'BC Research'} ) MERGE (a)-[:relatedTo]->(b);
+		
+
+CREATE (n:Person {name:'Ernesto Lee'}) RETURN n;
+CREATE (n:Person {name:'Kris Bennett'}) RETURN n;
+CREATE (n:Person {name:'Rosa Santos'}) RETURN n;
+CREATE (n:Person {name:'Flavia Cioanca'}) RETURN n;
+CREATE (n:Person {name:'Alexandra Groetsema'}) RETURN n;
+CREATE (n:Person {name:'Arianna Groetsema'}) RETURN n;
+CREATE (n:Person {name:'Navroop Sahdev'}) RETURN n;
+CREATE (n:Person {name:'Nathalie Salami'}) RETURN n;
+CREATE (n:Person {name:'Robert Schwentker'}) RETURN n;
+CREATE (n:Person {name:'Stephen Curran'}) RETURN n;
+CREATE (n:Person {name:'Carol Howard'}) RETURN n;
+CREATE (n:Person {name:'Thomas Hay'}) RETURN n;
+
+
+CREATE (n:Course {name:'Blockchain: Understanding Its Uses and Implications'}) RETURN n;
+CREATE (n:Course {name:'Introduction to Hyperledger Blockchain Technologies'}) RETURN n;
+CREATE (n:Course {name:'Introduction to Hyperledger Sovereign Identity Blockchain Solutions: Indy, Aries & Ursa'}) RETURN n;
+CREATE (n:Course {name:'Becoming a Hyperledger Aries Developer'}) RETURN n;
+CREATE (n:Course {name:'Hyperledger Besu Essentials: Creating a Private Blockchain Network'}) RETURN n;
+
+
+MATCH (a:Person {name:'Ernesto Lee'}), (b:Course {name:'Blockchain: Understanding Its Uses and Implications'}) MERGE (a)-[:instructs]->(b);
+MATCH (a:Person {name:'Kris Bennett'}), (b:Course {name:'Blockchain: Understanding Its Uses and Implications'}) MERGE (a)-[:instructs]->(b);
+MATCH (a:Person {name:'Rosa Santos'}), (b:Course {name:'Blockchain: Understanding Its Uses and Implications'}) MERGE (a)-[:instructs]->(b);
+
+MATCH (a:Person {name:'Flavia Cioanca'}), (b:Course {name:'Introduction to Hyperledger Blockchain Technologies'}) MERGE (a)-[:instructs]->(b);
+MATCH (a:Person {name:'Alexandra Groetsema'}), (b:Course {name:'Introduction to Hyperledger Blockchain Technologies'}) MERGE (a)-[:instructs]->(b);
+MATCH (a:Person {name:'Arianna Groetsema'}), (b:Course {name:'Introduction to Hyperledger Blockchain Technologies'}) MERGE (a)-[:instructs]->(b);
+MATCH (a:Person {name:'Navroop Sahdev'}), (b:Course {name:'Introduction to Hyperledger Blockchain Technologies'}) MERGE (a)-[:instructs]->(b);
+MATCH (a:Person {name:'Nathalie Salami'}), (b:Course {name:'Introduction to Hyperledger Blockchain Technologies'}) MERGE (a)-[:instructs]->(b);
+MATCH (a:Person {name:'Robert Schwentker'}), (b:Course {name:'Introduction to Hyperledger Blockchain Technologies'}) MERGE (a)-[:instructs]->(b);
+
+MATCH (a:Person {name:'Stephen Curran'}), (b:Course {name:'Introduction to Hyperledger Sovereign Identity Blockchain Solutions: Indy, Aries & Ursa'}) MERGE (a)-[:instructs]->(b);
+MATCH (a:Person {name:'Carol Howard'}), (b:Course {name:'Introduction to Hyperledger Sovereign Identity Blockchain Solutions: Indy, Aries & Ursa'}) MERGE (a)-[:instructs]->(b);
+
+MATCH (a:Person {name:'Stephen Curran'}), (b:Course {name:'Becoming a Hyperledger Aries Developer'}) MERGE (a)-[:instructs]->(b);
+MATCH (a:Person {name:'Carol Howard'}), (b:Course {name:'Becoming a Hyperledger Aries Developer'}) MERGE (a)-[:instructs]->(b);
+
+MATCH (a:Person {name:'Thomas Hay'}), (b:Course {name:'Hyperledger Besu Essentials: Creating a Private Blockchain Network'}) MERGE (a)-[:instructs]->(b);
+
+MATCH (a:node {name: '
+parent
+'} ), (b:node {name: '
+child
+'} ) MERGE (a)-[:relatedTo]->(b);
+
+
+
+CREATE (n:node {name: 'Taxonomy of Educational Opportunities '});
+CREATE (n:node {name: 'Evaluation'});
+CREATE (n:node {name: 'Standards'});
+CREATE (n:node {name: 'Evaluation of places of learning'});
+CREATE (n:node {name: 'Evaluation of learning resources'});
+CREATE (n:node {name: 'Evaluation of skill acquisition'});
+CREATE (n:node {name: 'Certificate'});
+CREATE (n:node {name: 'Places of Learning'});
+CREATE (n:node {name: 'Universities'});
+CREATE (n:node {name: 'Academies and Institutes'});
+CREATE (n:node {name: 'Professional Associations'});
+CREATE (n:node {name: 'Learning Platforms'});
+CREATE (n:node {name: 'On-the-job learning'});
+CREATE (n:node {name: 'Self-taught'});
+CREATE (n:node {name: 'Education'});
+CREATE (n:node {name: 'Education, levels & types'});
+CREATE (n:node {name: 'Levels of learning (1)'});
+CREATE (n:node {name: 'ISCED 4: Post-secondary non-tertiary education '});
+CREATE (n:node {name: 'ISCED 5: Short-cycle tertiary education'});
+CREATE (n:node {name: 'ISCED 6: Bachelor’s or equivalent level'});
+CREATE (n:node {name: 'ISCED 7: master’s or equivalent level'});
+CREATE (n:node {name: 'ISCED 8: Doctoral or equivalent level'});
+CREATE (n:node {name: 'Type of education'});
+CREATE (n:node {name: 'Academic'});
+CREATE (n:node {name: 'Vocational'});
+CREATE (n:node {name: 'Professional'});
+CREATE (n:node {name: 'Training'});
+CREATE (n:node {name: 'Self-taught'});
+CREATE (n:node {name: 'Education, Fields of Learning'});
+CREATE (n:node {name: 'DLT / Blockchain Introduction General'});
+CREATE (n:node {name: 'DLT Systems Anatomy (2)'});
+CREATE (n:node {name: 'Protocol Layer'});
+CREATE (n:node {name: 'Genesis Component'});
+CREATE (n:node {name: 'Intersystem Dependencies'});
+CREATE (n:node {name: 'Codebase Creation'});
+CREATE (n:node {name: 'Rule Initiation'});
+CREATE (n:node {name: 'Alteration Component'});
+CREATE (n:node {name: 'Protocol Governance'});
+CREATE (n:node {name: 'Protocol Change'});
+CREATE (n:node {name: 'Network Layer'});
+CREATE (n:node {name: 'Communication Component'});
+CREATE (n:node {name: 'Network Access'});
+CREATE (n:node {name: 'Data Broadcast'});
+CREATE (n:node {name: 'Transaction Initiation'});
+CREATE (n:node {name: 'Transaction Processing Component'});
+CREATE (n:node {name: 'Record Proposal'});
+CREATE (n:node {name: 'Validation Component'});
+CREATE (n:node {name: 'Transaction Validation'});
+CREATE (n:node {name: 'Record Validation'});
+CREATE (n:node {name: 'Transaction Finality'});
+CREATE (n:node {name: 'Data Layer'});
+CREATE (n:node {name: 'Operations Component'});
+CREATE (n:node {name: 'Input'});
+CREATE (n:node {name: 'Programmatically executed transactions'});
+CREATE (n:node {name: 'Locus of execution'});
+CREATE (n:node {name: 'Journal Component'});
+CREATE (n:node {name: 'Reference'});
+CREATE (n:node {name: 'Blockchain Taxonomy (3)'});
+CREATE (n:node {name: 'Consensus'});
+CREATE (n:node {name: 'Consensus Network Topology'});
+CREATE (n:node {name: 'Decentralized'});
+CREATE (n:node {name: 'Hierarchical'});
+CREATE (n:node {name: 'Centralized'});
+CREATE (n:node {name: 'Consensus Immutability and Failure Tolerance'});
+CREATE (n:node {name: 'Proof-of-Work'});
+CREATE (n:node {name: 'Proof-of-Stake'});
+CREATE (n:node {name: 'Proof-of-Authority'});
+CREATE (n:node {name: 'Proof-of-Capacity/Proof-of-Space and Proof-of-Storage'});
+CREATE (n:node {name: 'Proof-of-Burn'});
+CREATE (n:node {name: 'Hybrid'});
+CREATE (n:node {name: 'Gossiping'});
+CREATE (n:node {name: 'Local'});
+CREATE (n:node {name: 'Global'});
+CREATE (n:node {name: 'Consensus Agreement'});
+CREATE (n:node {name: 'Latency'});
+CREATE (n:node {name: 'Synchronous Communication'});
+CREATE (n:node {name: 'Asynchronous Communication'});
+CREATE (n:node {name: 'Finality'});
+CREATE (n:node {name: 'Non-Deterministic'});
+CREATE (n:node {name: 'Deterministic'});
+CREATE (n:node {name: 'Transaction Capabilities'});
+CREATE (n:node {name: 'Data Structure in the Blockcheader'});
+CREATE (n:node {name: 'Binary Merkle Tree'});
+CREATE (n:node {name: 'Patricia Merkle Tree'});
+CREATE (n:node {name: 'Transaction Model'});
+CREATE (n:node {name: 'The Unspent Transaction Output (UTXO)'});
+CREATE (n:node {name: 'Traditional Ledger'});
+CREATE (n:node {name: 'Server Storage'});
+CREATE (n:node {name: 'Full Node Only'});
+CREATE (n:node {name: 'Thin Node Capable'});
+CREATE (n:node {name: 'Block Storage'});
+CREATE (n:node {name: 'Transactions'});
+CREATE (n:node {name: 'User Balance'});
+CREATE (n:node {name: 'Limits to Scalability'});
+CREATE (n:node {name: 'Number of Transactions'});
+CREATE (n:node {name: 'Number of Users'});
+CREATE (n:node {name: 'Number of Nodes'});
+CREATE (n:node {name: 'Possible Values'});
+CREATE (n:node {name: 'Confirmation Time'});
+CREATE (n:node {name: 'Security and Privacy'});
+CREATE (n:node {name: 'Data Encryption'});
+CREATE (n:node {name: 'SHA-2'});
+CREATE (n:node {name: 'ZK-SNARKS'});
+CREATE (n:node {name: 'Data Privacy'});
+CREATE (n:node {name: 'Built-In Data Privacy'});
+CREATE (n:node {name: 'Add-On Data Privacy'});
+CREATE (n:node {name: 'Codebase'});
+CREATE (n:node {name: 'Coding Language'});
+CREATE (n:node {name: 'Single Language'});
+CREATE (n:node {name: 'Multiple Languages'});
+CREATE (n:node {name: 'Code License'});
+CREATE (n:node {name: 'Open-Source'});
+CREATE (n:node {name: 'Closed-Source'});
+CREATE (n:node {name: 'Software Architecture'});
+CREATE (n:node {name: 'Monolithic Design'});
+CREATE (n:node {name: 'Polylithic Design'});
+CREATE (n:node {name: 'Identity Management'});
+CREATE (n:node {name: 'Access and Control Layer'});
+CREATE (n:node {name: 'Public Blockchain'});
+CREATE (n:node {name: 'Permissioned Public Blockchain'});
+CREATE (n:node {name: 'Permissioned Private Blockchain'});
+CREATE (n:node {name: 'Identity Layer'});
+CREATE (n:node {name: 'KYC/AML'});
+CREATE (n:node {name: 'Anonymous'});
+CREATE (n:node {name: 'Native Currency / Tokenisation'});
+CREATE (n:node {name: 'Native Asset'});
+CREATE (n:node {name: 'None'});
+CREATE (n:node {name: 'Own Cryptocurrency'});
+CREATE (n:node {name: 'Convertible Multiple Assets'});
+CREATE (n:node {name: 'Tokenisation'});
+CREATE (n:node {name: 'No Tokenisation Present'});
+CREATE (n:node {name: 'Tokenisation Through Third-Party Add-Ons'});
+CREATE (n:node {name: 'Tokenisation'});
+CREATE (n:node {name: 'Asset Supply Management'});
+CREATE (n:node {name: 'Limited-Deterministic'});
+CREATE (n:node {name: 'Unlimited-Deterministic'});
+CREATE (n:node {name: 'Pre-Mined'});
+CREATE (n:node {name: 'Charging and Rewarding System'});
+CREATE (n:node {name: 'Reward System'});
+CREATE (n:node {name: 'Lump-Sum Reward'});
+CREATE (n:node {name: 'Block + Security Reward'});
+CREATE (n:node {name: 'Fee System'});
+CREATE (n:node {name: 'Fee Reward'});
+CREATE (n:node {name: 'Optional Fees'});
+CREATE (n:node {name: 'Mandatory Fees'});
+CREATE (n:node {name: 'No Fees'});
+CREATE (n:node {name: 'Fee Structure'});
+CREATE (n:node {name: 'Variable Fees'});
+CREATE (n:node {name: 'Extensibility'});
+CREATE (n:node {name: 'Interoperability'});
+CREATE (n:node {name: 'Implicit Interoperability'});
+CREATE (n:node {name: 'Explicit Interoperability'});
+CREATE (n:node {name: 'No Interoperability'});
+CREATE (n:node {name: 'Intraoperability'});
+CREATE (n:node {name: 'Implicit Intraoperability'});
+CREATE (n:node {name: 'Explicit Intraoperability'});
+CREATE (n:node {name: 'No Intraoperability'});
+CREATE (n:node {name: 'Governance'});
+CREATE (n:node {name: 'Open-Source Community'});
+CREATE (n:node {name: 'Technical'});
+CREATE (n:node {name: 'Alliance'});
+CREATE (n:node {name: 'Scripting Language'});
+CREATE (n:node {name: 'Turing Complete'});
+CREATE (n:node {name: 'Generic Non-Turing Complete'});
+CREATE (n:node {name: 'Application-Specific Non-Turing Complete'});
+CREATE (n:node {name: 'Non-Turing Complete + External Data'});
+CREATE (n:node {name: 'DLT / Blockchain Layers - How to build'});
+CREATE (n:node {name: 'Business Models & Entrepreneurship'});
+CREATE (n:node {name: 'Application and Presentation Layer'});
+CREATE (n:node {name: 'Consensus Layers'});
+CREATE (n:node {name: 'Network Layer'});
+CREATE (n:node {name: 'Data Layer'});
+CREATE (n:node {name: 'Hardware and Infrastructure Layer'});
+CREATE (n:node {name: 'Education, Skills & competencies'});
+CREATE (n:node {name: 'Skills'});
+CREATE (n:node {name: 'Business Development'});
+CREATE (n:node {name: 'Programming'});
+CREATE (n:node {name: 'Community Developer'});
+CREATE (n:node {name: 'Communicator'});
+CREATE (n:node {name: 'Research'});
+CREATE (n:node {name: 'Soft Skills'});
+CREATE (n:node {name: 'Jobs'});
+CREATE (n:node {name: 'BC Consultant/Advisor/analyst'});
+CREATE (n:node {name: 'BC Engineer/Administrator'});
+CREATE (n:node {name: 'BC Developer/Smart Contract Developer'});
+CREATE (n:node {name: 'Crypto Engineer/Token Engineer'});
+CREATE (n:node {name: 'BC Architect'});
+CREATE (n:node {name: 'BC Quality Engineer/Tester'});
+CREATE (n:node {name: 'BC Legal Consultant of Attorney'});
+CREATE (n:node {name: 'BaaS Operator'});
+CREATE (n:node {name: 'BC Journalist/Writer'});
+CREATE (n:node {name: 'BC Sales'});
+CREATE (n:node {name: 'BC Project Manager'});
+CREATE (n:node {name: 'Blockchain Cybersecurity'});
+CREATE (n:node {name: 'BC Market Research'});
+CREATE (n:node {name: 'BC Data Scientist'});
+CREATE (n:node {name: 'BC Community Developer'});
+CREATE (n:node {name: 'BC Research'});
+CREATE (n:node {name: 'Paths of Learnins'});
+CREATE (n:node {name: 'Use Cases'});
+CREATE (n:node {name: 'Learning Resources'});
+CREATE (n:node {name: 'Courses'});
+CREATE (n:node {name: 'Duration'});
+CREATE (n:node {name: 'Number of sessions'});
+CREATE (n:node {name: 'Number of months'});
+CREATE (n:node {name: 'Number of years'});
+CREATE (n:node {name: 'Labs'});
+CREATE (n:node {name: 'Seminars'});
+CREATE (n:node {name: 'Tutorials'});
+
+
+
+
+
+
+
+
+
+
+
+
+
+Taxonomy of Educational Opportunities 
+	Evaluation
+		Standards
+		Evaluation of places of learning
+		Evaluation of learning resources
+		Evaluation of skill acquisition
+			Certificate
+	Places of Learning
+		Universities
+		Academies and Institutes
+		Professional Associations
+		Learning Platforms
+		On-the-job learning
+		Self-taught
+
+	Education
+		Education, levels & types
+			Levels of learning (1)
+				ISCED 4: Post-secondary non-tertiary education 
+				ISCED 5: Short-cycle tertiary education
+				ISCED 6: Bachelor’s or equivalent level
+				ISCED 7: master’s or equivalent level
+				ISCED 8: Doctoral or equivalent level
+			Type of education
+				Academic
+				Vocational
+				Professional
+				Training
+				Self-taught
+		Education, Fields of Learning
+			DLT / Blockchain Introduction General
+			DLT Systems Anatomy (2)
+				Protocol Layer
+					Genesis Component
+						Intersystem Dependencies
+						Codebase Creation
+						Rule Initiation
+					Alteration Component
+						Protocol Governance
+						Protocol Change
+				Network Layer
+					Communication Component
+						Network Access
+						Data Broadcast
+						Transaction Initiation
+					Transaction Processing Component
+						Record Proposal
+						Conflict Resolution Rule
+					Validation Component
+						Transaction Validation
+						Record Validation
+						Transaction Finality
+				Data Layer
+					Operations Component
+						Input
+						Programmatically executed transactions
+						Locus of execution
+					Journal Component
+						Reference
+			Blockchain Taxonomy (3)
+				Consensus
+					Consensus Network Topology
+						Decentralized
+						Hierarchical
+						Centralized
+					Consensus Immutability and Failure Tolerance
+						Proof-of-Work
+						Proof-of-Stake
+						Proof-of-Authority
+						Proof-of-Capacity/Proof-of-Space and Proof-of-Storage
+						Proof-of-Burn
+						Hybrid
+					Gossiping
+						Local
+						Global
+					Consensus Agreement
+						Latency
+							Synchronous Communication
+							Asynchronous Communication
+						Finality
+							Non-Deterministic
+							Deterministic
+				Transaction Capabilities
+					Data Structure in the Blockcheader
+						Binary Merkle Tree
+						Patricia Merkle Tree
+					Transaction Model
+						The Unspent Transaction Output (UTXO)
+						Traditional Ledger
+					Server Storage
+						Full Node Only
+						Thin Node Capable
+					Block Storage
+						Transactions
+						User Balance
+					Limits to Scalability
+						Number of Transactions
+						Number of Users
+						Number of Nodes
+						Possible Values
+						Confirmation Time
+				Security and Privacy
+					Data Encryption
+						SHA-2
+						ZK-SNARKS
+					Data Privacy
+						Built-In Data Privacy
+						Add-On Data Privacy
+				Codebase
+					Coding Language
+						Single Language
+						Multiple Languages
+					Code License
+						Open-Source
+						Closed-Source
+					Software Architecture
+						Monolithic Design
+						Polylithic Design
+				Identity Management
+					Access and Control Layer
+						Public Blockchain
+						Permissioned Public Blockchain
+						Permissioned Private Blockchain
+					Identity Layer
+						KYC/AML
+						Anonymous
+				Native Currency / Tokenisation
+					Native Asset
+						None
+						Own Cryptocurrency
+						Convertible Multiple Assets
+					Tokenisation
+						No Tokenisation Present
+						Tokenisation Through Third-Party Add-Ons
+						Tokenisation
+					Asset Supply Management
+						Limited-Deterministic
+						Unlimited-Deterministic
+						Pre-Mined
+				Charging and Rewarding System
+					Reward System
+						Lump-Sum Reward
+						Block + Security Reward
+					Fee System
+						Fee Reward
+							Optional Fees
+							Mandatory Fees
+							No Fees
+						Fee Structure
+							Variable Fees
+				Extensibility
+					Interoperability
+						Implicit Interoperability
+						Explicit Interoperability
+						No Interoperability
+					Intraoperability
+						Implicit Intraoperability
+						Explicit Intraoperability
+						No Intraoperability
+					Governance
+						Open-Source Community
+						Technical
+						Alliance
+					Scripting Language
+						Turing Complete
+						Generic Non-Turing Complete
+						Application-Specific Non-Turing Complete
+						Non-Turing Complete + External Data
+			DLT / Blockchain Layers - How to build
+				Business Models & Entrepreneurship
+				Application and Presentation Layer
+				Consensus Layers
+				Network Layer
+				Data Layer
+				Hardware and Infrastructure Layer
+		Education, Skills & competencies
+			Skills
+				Business Development
+				Programming
+				Community Developer
+				Communicator
+				Research
+				Soft Skills
+			Jobs
+				BC Consultant/Advisor/analyst
+				BC Engineer/Administrator
+				BC Developer/Smart Contract Developer
+				Crypto Engineer/Token Engineer
+				BC Architect
+				BC Quality Engineer/Tester
+				BC Legal Consultant of Attorney
+				BaaS Operator
+				BC Journalist/Writer
+				BC Sales
+				BC Project Manager
+				Blockchain Cybersecurity
+				BC Market Research
+				BC Data Scientist
+				BC Community Developer
+				BC Research
+			Paths of Learnins
+	Use Cases
+	**Credits:**    
+	(1) UNESCO, International Standard Classification of Education, ISCED 2011 http://uis.unesco.org/sites/default/files/documents/international-standard-classification-of-education-isced-2011-en.pdf 
+	
+	(2) Rauchs, M. Glidden, A., Gordon, B., Pieters, G., Recanatini, M. Rostand, F., Vagneur, K. Zhang, B., Distributed Ledger Technology Systems, A Conceptual Framework. https://www.jbs.cam.ac.uk/wp-content/uploads/2020/08/2018-10-26-conceptualising-dlt-systems.pdf 
+	 
+	(3) Tasca, P., Tessone, C.J., A Taxonomy of Blockchain Technologies: Principles of Identification and Classification  https://ledger.pitt.edu/ojs/ledger/article/view/140 
+	Learning Resources
+		Courses
+			Duration
+				Number of sessions
+				Number of months
+				Number of years
+		Labs
+		Seminars
+		Tutorials
